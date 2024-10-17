@@ -30,4 +30,4 @@ var lengthOfLastWord = function (s) {
   return lastWord.length;
 };
 
-console.log(lengthOfLastWord("i am nivedha "));
+console.log(lengthOfLastWord("i am nivedha. I love coding"));

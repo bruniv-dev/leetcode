@@ -3,3 +3,4 @@ const sumOfNMinusOne = (n) => {
 };
 
 console.log(sumOfNMinusOne(5));
+console.log(sumOfNMinusOne(15));

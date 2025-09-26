@@ -8,9 +8,11 @@ const checkMonotonic = function (array) {
 
   //empty array is yes checkMonotonic
 
-  if (array.length === 0) {
-    return true;
-  }
+  // if (array.length === 0) {
+  //   return true;
+  // }
+
+  if (array.length <= 1) return true;
 
   const first = array[0];
   const last = array[array.length - 1];
@@ -48,3 +50,31 @@ const checkMonotonic = function (array) {
 };
 
 console.log(checkMonotonic([3, 3, 3]));
+
+//approach2
+
+function isMonotonic(array) {
+  let monDec = true;
+  let monInc = true;
+
+  //to return empty array and array with one element as monotonic
+  if (array.length <= 1) return true;
+
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] < array[index + 1]) {
+      monDec = false;
+    }
+
+    if (array[index] > array[index + 1]) {
+      monInc = false;
+    }
+  }
+  return monDec || monInc; //returns false only when both are false
+}
+
+console.log(isMonotonic([]));
+console.log(isMonotonic([1]));
+console.log(isMonotonic([2, 2, 2]));
+console.log(isMonotonic([4, 5, 6]));
+console.log(isMonotonic([7, 3, 1]));
+console.log(isMonotonic([7, 10, 3, 1]));

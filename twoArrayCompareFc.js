@@ -13,7 +13,7 @@
 //if parameters
 function twoArraysFc(array1, array2) {
   if (array1.length !== array2.length) return false;
-  if (array1.length === 0 || array2.length === 0) return false;
+  // if (array1.length === 0 || array2.length === 0) return false; WRONG! EMPTY STRINGS ARE ANAGRAMS
   let obj1 = {};
   let obj2 = {};
   for (let val of array1) {
